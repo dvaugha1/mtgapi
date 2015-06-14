@@ -24,7 +24,7 @@ end
 
 private
 	def card_params
-		params.require(:card).permit(:name, :type, :edition,
+		params.require(:card).permit(:name, :kind, :edition,
 									 :rarity, :artist, :rule,
 									 :flavor, :mana, :attack,
 									 :toughness)

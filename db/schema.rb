@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150613224513) do
+ActiveRecord::Schema.define(version: 20150614054256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cards", force: :cascade do |t|
     t.string   "name"
-    t.string   "type"
     t.string   "edition"
     t.string   "rarity"
     t.string   "artist"
@@ -29,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150613224513) do
     t.integer  "toughness"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "kind"
   end
 
   create_table "users", force: :cascade do |t|
