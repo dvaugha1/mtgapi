@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations",
                                       sessions: "sessions" }
+
+  get '/cards', to: 'cards#list', as: 'cards_list'                                    
+  resources :cards, only: [:create, :update, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
