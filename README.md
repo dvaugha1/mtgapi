@@ -19,3 +19,15 @@ You will not have to be registered to search for a card, view the master list, o
 	}
 }
 
+### User sign in
+#### /users/sign_in POST
+###### Required params:
+* user {email: email@email.com, password: password}
+
+###### Returns:
+{
+	"user": {
+		"email": "email@email.com",
+		"authentication_token": "sJiDHgfndAeoHS_L33fn"
+	}
+}
